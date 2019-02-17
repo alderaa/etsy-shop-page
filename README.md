@@ -11,7 +11,30 @@ Checkout repository and run
 
 ```npm install```
 
-Update config.json with shop information and Etsy API key. See [Etsy Developers Site](https://www.etsy.com/developers/documentation/) for instructions on obtaining an api key. 
+Update config.json with shop information and Etsy API key. See [Etsy Developers Site](https://www.etsy.com/developers/documentation/) for instructions on obtaining an api key.
+
+```
+{
+  "sandbox": {
+    "etsy_public_key":"boguskeyreplaceme",
+    "etsy_shop_name":"etsyshopname",
+    "shop_url":"/shop",
+    "shop_title":"My Etsy Shop",
+    "shop_facebook":"https://www.facebook.com/my-facebook-page/",
+    "shop_blog":"localhost:3000/blog",
+    "shop_about":"localhost:3000/about"
+  },
+  "production": {
+    "etsy_public_key":"boguskeyreplaceme",
+    "etsy_shop_name":"etsyshopname",
+    "shop_url":"https://example.com/shop",
+    "shop_title":"My Etsy Shop",
+    "shop_facebook":"https://www.facebook.com/my-facebook-page/",
+    "shop_blog":"https://example.com/blog",
+    "shop_about":"https://example.com/about"
+  }
+}
+```
 
 Default urls are /shop and /shop/:listingid. App supports a different url for Blog and About easy to customize header in views/default.hbs
 
