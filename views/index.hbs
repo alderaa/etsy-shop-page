@@ -1,0 +1,28 @@
+{{!< default}}
+<div class="center" style="margin-bottom:40px">
+    <h1>{{title}}</h1>
+</div>
+<div>
+    {{#each sections}}
+    <h2>{{this.title}}</h2>
+    <div id="{{this.shop_section_id}}" class="row">
+        {{#each this.listings}}
+        <a href="/shop/{{this.listing_id}}">
+            <div class="col l4">
+                <div class="card medium">
+                    <div class="card-image">
+                        <img alt="{{{this.title}}}" src="{{this.MainImage.url_570xN}}">
+                    </div>
+                    <div class="card-content">
+                        <h6 class="grey-text text-darken-4">{{{this.title}}}</h6>
+                    </div>
+                    <div class="card-action">
+                        <a class="grey-text text-darken-4" href="/shop/{{this.listing_id}}">${{this.price}}</a>
+                    </div>
+                </div>
+            </div>
+        </a>
+        {{/each}}
+    </div>
+    {{/each}}
+</div>

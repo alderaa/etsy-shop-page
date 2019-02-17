@@ -1,0 +1,23 @@
+{
+  "name": "etsy-shop-page",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "NODE_ENV=production node ./bin/www",
+    "test": "NODE_ENV=sandbox node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "debug": "^4.1.1",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.1.0",
+    "helper-markdown": "^1.0.0",
+    "linkifyjs": "^2.1.8",
+    "node-cache": "^4.2.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
+    "serve-favicon": "^2.5.0"
+  }
+}

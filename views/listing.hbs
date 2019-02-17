@@ -1,0 +1,40 @@
+{{!< default}}
+<style>
+    h2 {
+        font-size: 1.7rem;
+        margin: 1vw 0vw 1vw;
+    }
+
+    h1 {
+        font-size: 2.0rem;
+    }
+</style>
+<div class="z-depth-1" style="padding-top:2vw">
+    <div class="center">
+        <h2>
+            <a href="{{shop_url}}"><i class="material-icons">arrow_back</i>{{shop_title}}</a>
+        </h2>
+        <h1><span style="display:inline-block; max-width:1000px">{{{title}}}</span></h1>
+        <h1>${{listing.price}}</h1>
+        <p>
+            <a href="{{listing.url}}" class="waves-effect waves-light btn-large">
+                <i class="material-icons left large">add_shopping_cart</i>Order Now on Etsy
+            </a>
+        </p>
+    </div>
+    <div class="row container">
+        <div class="col s12 flow-text">
+            <a target="_blank" href="{{listing.url}}">
+                <img style="width:100%" alt="{{{listing.title}}}" src="{{listing.MainImage.url_fullxfull}}"></img>
+            </a>
+
+            {{{markdown listing.description}}}
+
+            <p class="center">
+                <a href="{{listing.url}}" class="waves-effect waves-light btn-large">
+                    <i class="material-icons left large">add_shopping_cart</i>Order Now on Etsy
+                </a>
+            </p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+{
+  "sandbox": {
+    "etsy_public_key":"boguskeyreplaceme",
+    "etsy_shop_name":"etsyshopname",
+    "shop_url":"/shop",
+    "shop_title":"My Etsy Shop",
+    "shop_facebook":"https://www.facebook.com/my-facebook-page/",
+    "shop_blog":"localhost:3000/blog",
+    "shop_about":"localhost:3000/about"
+  },
+  "production": {
+    "etsy_public_key":"boguskeyreplaceme",
+    "etsy_shop_name":"etsyshopname",
+    "shop_url":"https://example.com/shop",
+    "shop_title":"My Etsy Shop",
+    "shop_facebook":"https://www.facebook.com/my-facebook-page/",
+    "shop_blog":"https://example.com/blog",
+    "shop_about":"https://example.com/about"
+  }
+}
