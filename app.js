@@ -1,13 +1,13 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
+var express = require('express');
 var hbs = require('express-handlebars');
+var handleBars = require('handlebars');
+var morgan = require('morgan');
+var path = require('path');
 var routes = require('./routes/index');
-var Handlebars = require('handlebars');
+
 var app = express();
-var config = require('./config')[app.get('env')];
 
 // view engine setup
 app.set('view engine', 'hbs');
@@ -18,8 +18,9 @@ app.engine('hbs', hbs({
   layoutsDir: __dirname + '/views/'
 }));
 
-Handlebars.registerHelper('markdown', require('helper-markdown'));
+handleBars.registerHelper('markdown', require('helper-markdown'));
 
+app.use(morgan('[:date[web]] :method :url :status :response-time ms - :res[content-length]'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());

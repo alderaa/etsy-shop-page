@@ -6,7 +6,9 @@
     "shop_title":"My Etsy Shop",
     "shop_facebook":"https://www.facebook.com/my-facebook-page/",
     "shop_blog":"localhost:3000/blog",
-    "shop_about":"localhost:3000/about"
+    "shop_about":"localhost:3000/about",
+    "log_level":"debug",
+    "cache_timeout_sec":10
   },
   "production": {
     "etsy_public_key":"boguskeyreplaceme",
@@ -15,6 +17,8 @@
     "shop_title":"My Etsy Shop",
     "shop_facebook":"https://www.facebook.com/my-facebook-page/",
     "shop_blog":"https://example.com/blog",
-    "shop_about":"https://example.com/about"
+    "shop_about":"https://example.com/about",
+    "log_level":"info",
+    "cache_timeout_sec":86400
   }
 }
