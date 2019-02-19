@@ -5,8 +5,10 @@
     "shop_url":"/shop",
     "shop_title":"My Etsy Shop",
     "shop_facebook":"https://www.facebook.com/my-facebook-page/",
+    "shop_instagram":"https://www.instagram.com/my-instagram-page/",
     "shop_blog":"localhost:3000/blog",
     "shop_about":"localhost:3000/about",
+    "shop_subscribe":"localhost:3000/subscribe",
     "log_level":"debug",
     "cache_timeout_sec":10
   },
@@ -16,8 +18,10 @@
     "shop_url":"https://example.com/shop",
     "shop_title":"My Etsy Shop",
     "shop_facebook":"https://www.facebook.com/my-facebook-page/",
+    "shop_instagram":"https://www.instagram.com/my-instagram-page/",
     "shop_blog":"https://example.com/blog",
     "shop_about":"https://example.com/about",
+    "shop_subscribe":"https://example.com/subscribe",
     "log_level":"info",
     "cache_timeout_sec":86400
   }

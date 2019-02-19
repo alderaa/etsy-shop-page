@@ -13,6 +13,8 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 
@@ -44,13 +46,32 @@
     <nav style="background:#F5CAB3">
         <div class="nav-wrapper container">
             <a href="/"><img style="margin:auto;width:60px;float:left" src="/shop/assets/images/logo.png"></a>
-            <ul id="nav-mobile" class="left">
+            <a href="#" data-target="mobile" class="sidenav-trigger right black-text hide-on-med-and-up"><i
+                    class="material-icons">menu</i></a>
+            <ul id="right-nav" class="left">
                 {{#if shop_blog}}<li><a class="black-text" href="{{shop_blog}}">Blog</a></li>{{/if}}
                 {{#if shop_about}}<li><a class="black-text" href="{{shop_about}}">About</a></li>{{/if}}
                 {{#if shop_url}}<li><a class="black-text" href="{{shop_url}}">Shop</a></li>{{/if}}
             </ul>
+            <ul id="left-nav" class="right hide-on-small-and-down">
+                {{#if shop_subscribe}}<li><a class="black-text btn white" href="{{shop_subscribe}}">Subscribe</a></li>
+                {{/if}}
+                {{#if shop_instagram}}<li><a class="black-text" href="{{shop_instagram}}"><i
+                            class="fab fa-instagram"></i></a></li>{{/if}}
+                {{#if shop_facebook}}<li><a class="black-text" href="{{shop_facebook}}"><i
+                            class="fab fa-facebook-f"></i></a></li>{{/if}}
+            </ul>
         </div>
     </nav>
+
+    <ul class="sidenav center" id="mobile">
+        {{#if shop_subscribe}}<li><a class="black-text btn" style="background:#F5CAB3" href="{{shop_subscribe}}">Subscribe</a></li>
+        {{/if}}
+        {{#if shop_instagram}}<li><a class="black-text" href="{{shop_instagram}}"><i class="fab fa-instagram"></i><span class="left">Instagram</span></a>
+        </li>{{/if}}
+        {{#if shop_facebook}}<li><a class="black-text" href="{{shop_facebook}}"><i class="fab fa-facebook-f"></i><span class="left">Facebook</span></a>
+        </li>{{/if}}
+    </ul>
 
     <div class="container">{{{body}}}</div>
 
@@ -70,6 +91,12 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        $(document).ready(function () {
+            $('.sidenav').sidenav({edge: 'right'});
+        });
+    </script>
 </body>
 
 </html>
